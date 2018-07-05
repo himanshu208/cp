@@ -66,7 +66,7 @@ img:active{
 }
 #custom-bootstrap-menu.navbar-default .navbar-left>li{
     min-height: 48px;
-    width: 130px;
+    min-width: 130px; width:auto;
     padding-left: 0;
     text-align: center;
 }

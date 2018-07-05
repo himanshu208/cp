@@ -13,8 +13,10 @@ $this->load->view('public/alfa/_parts/header');
         <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav navbar-left">
                 <li class="active"><a href="<?php echo base_url();?>"><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('nav_home');?></a></li>
-				<li><a href="<?php echo base_url('users');?>"><i class="fa fa-users" aria-hidden="true"></i> <?php echo lang('nav_all_users');?></a></li>
-                <li><a href="<?php echo base_url('admin');?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?php echo lang('nav_admin');?></a></li>
+				<li><a href="<?php echo base_url('users');?>"><i class="fa fa-users" aria-hidden="true"></i> <?php //echo lang('nav_all_users');?>How it Works</a></li>
+                <li><a href="<?php echo base_url('admin');?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?php //echo lang('nav_admin');?>Support / Suggestions</a></li>
+                <li><a href="<?php echo base_url('admin');?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?php //echo lang('nav_admin');?>About Us</a></li>
+               
             </ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="<?php echo base_url();?>"><i class="fa fa-lock" aria-hidden="true"></i><span class="nav_log"> <?php echo lang('nav_login');?></span></a></li>
@@ -31,7 +33,7 @@ $this->load->view('public/alfa/_parts/header');
 
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Bootstrap styling for Responsive Datatable (Server Side)</h2>
+            <h2 class="text-center" style="font-size:18px;"><b>Check Poolers and Riders List</b></h2>
         </div>
 
         <div class="row">
@@ -41,13 +43,15 @@ $this->load->view('public/alfa/_parts/header');
                 <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                     <thead>
                         <tr>
+                            <th>Rider/Pooler</th>
                             <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Extn.</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                            <th></th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Start Date</th>
+                            <th>Time</th>
+                            <th>Contact</th>
+                            <th>Detail</th>
+                            
                         </tr>
                     </thead>
 
