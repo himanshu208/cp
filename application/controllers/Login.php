@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Social extends MY_Controller {
+class Login extends MY_Controller {
     /* -------------------------------------------------------------- */
     public function __construct() {
         parent::__construct();
@@ -8,35 +8,6 @@ class Social extends MY_Controller {
     }
     /* -------------------------------------------------------------- */
     public function index() {
-        $this->load->view('public/alfa/login_view');
-    }
-    public function login_register() {
-        // Delete old sessions before 10 Minutes
-        $data["delete_old_sessions"] = $this->cisociall_model->delete_old_sessions();
-
-        if ($this->is_online) {
-            $data["user_loggedin_detail"] = $this->cisociall_model->already_login($this->sess_identifier);
-
-            // User is active or not
-            foreach ($data["user_loggedin_detail"] as $uld) {
-
-                if ($uld->active == 1) {// If account is active show loggedin data
-                    $this->load->view('public/alfa/loggedin_view', $data);
-                } else {// If is not active account, logout and show deactive error warning
-                    $this->hybridauthlib->logoutAllProviders();
-                    $this->session->sess_destroy();
-
-                    $this->load->view('public/alfa/deactivate_view');
-                }
-            }
-        }
-        // If it is not online: If logout or dont logged with any provider.
-        else {
-            $data['providers'] = $this->hybridauthlib->getProviders();
-            $this->load->view('public/alfa/login_register', $data);
-        }
-    }
-    public function myaccount() {
         // Delete old sessions before 10 Minutes
         $data["delete_old_sessions"] = $this->cisociall_model->delete_old_sessions();
 
@@ -63,39 +34,7 @@ class Social extends MY_Controller {
         }
     }
     /* -------------------------------------------------------------- */
-    public function mycarpool() {
-        // Delete old sessions before 10 Minutes
-        $data["delete_old_sessions"] = $this->cisociall_model->delete_old_sessions();
-        $this->load->view('public/alfa/mycarpool', $data);
-    }
-    public function create_carpool () {
-        // Delete old sessions before 10 Minutes
-        $data["delete_old_sessions"] = $this->cisociall_model->delete_old_sessions();
-        $this->load->view('public/alfa/create_carpool', $data);
-    }
-    public function search_carpool () {
-        // Delete old sessions before 10 Minutes
-        $data["delete_old_sessions"] = $this->cisociall_model->delete_old_sessions();
-        $this->load->view('public/alfa/search_carpool', $data);
-    }
-    /* -------------------------------------------------------------- */
-    public function how_it_works() {
-        $this->load->view('public/alfa/how_it_works');
-    }
-    /* -------------------------------------------------------------- */
-    public function support() {
-        $this->load->view('public/alfa/support');
-    }
-    /* -------------------------------------------------------------- */
-    public function about() {
-        $this->load->view('public/alfa/about');
-    }
-    public function contact_us() {
-        $this->load->view('public/alfa/contact_us');
-    }
-    public function tou() {
-        $this->load->view('public/alfa/tou');
-    }
+
     /* -------------------------------------------------------------- */
     public function login($provider) {
         if ($this->is_online OR ! $provider) {

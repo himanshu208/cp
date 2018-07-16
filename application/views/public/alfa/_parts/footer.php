@@ -2,12 +2,12 @@
 			<div class="content">
 				<div class="row">
 		    		<a href="#" class="back-to-top" data-toggle="tooltip" data-placement="top" title="Top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-					<p class="footer_left"><?php echo lang('footer_all_rights_reserved');?> <?php echo lang('footer_site_owner');?></p>
+                                <p class="footer_left">Copyright &COPY; 2018 RidersAndPoolers.com</p>
 					<p>
 						<ul class="social_icons">
-							<li><a href="https://www.facebook.com/app_scoped_user_id/115438265694369/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="http://twitter.com/cisociall" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://plus.google.com/106739428297397232594" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
 						</ul>
 					</p>
 				</div>

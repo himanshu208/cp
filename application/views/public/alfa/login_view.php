@@ -5,25 +5,7 @@ $this->load->view('public/alfa/_parts/header');
 <title><?php echo $this->config->item('site_title'); ?></title>
 </head>
 <body>
-
-<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
-    <div class="container-fluid">
-    	<!-- Load Navbar Header -->
-		<?php $this->load->view('public/alfa/_parts/navbar_header');?>
-        <div class="collapse navbar-collapse navbar-menubuilder">
-            <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="<?php echo base_url();?>"><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('nav_home');?></a></li>
-				<li><a href="<?php echo base_url('users');?>"><i class="fa fa-users" aria-hidden="true"></i> <?php //echo lang('nav_all_users');?>How it Works</a></li>
-                <li><a href="<?php echo base_url('admin');?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?php //echo lang('nav_admin');?>Support / Suggestions</a></li>
-                <li><a href="<?php echo base_url('admin');?>"><i class="fa fa-user-circle" aria-hidden="true"></i> <?php //echo lang('nav_admin');?>About Us</a></li>
-               
-            </ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="<?php echo base_url();?>"><i class="fa fa-lock" aria-hidden="true"></i><span class="nav_log"> <?php echo lang('nav_login');?></span></a></li>
-			</ul>
-        </div>
-    </div>
-</div>
+<?php $this->load->view('public/alfa/_parts/navbar_header');?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -51,7 +33,7 @@ $this->load->view('public/alfa/_parts/header');
                             <th>Time</th>
                             <th>Contact</th>
                             <th>Detail</th>
-                            
+
                         </tr>
                     </thead>
 
@@ -586,22 +568,5 @@ var data = [
     //});
 
 </script>
-<div class="container">
-	<div class="row">
-		<div class="headline">
-			<p class="headline_title"><?php echo lang('headline_cisociall_login');?></p>
-			<p class="headline_explanation"><?php echo lang('view_login_explanation');?></p>
-		</div><hr/>
-		<div class="icons-container">
-            <div class="row">
-	            <?php foreach($providers as $provider => $data) {?>
-	            <div class="col-sm-4 col-md-3">
-	            	<a href="<?php echo base_url('social/login/'.$provider); ?>" class="btn cisociall_social cisociall_btn cisociall_<?php echo strtolower($provider);?>"><span class="separator"></span><i class="socicon socicon-<?php echo strtolower($provider);?>"></i><span class="soc_title"><?php echo $provider;?></span></a>
-	            </div>
-	            <?php } ?>
-			</div>
-		</div>
-	</div>
-</div>
 
 <?php $this->load->view('public/alfa/_parts/footer'); ?>

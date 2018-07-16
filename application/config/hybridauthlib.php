@@ -8,32 +8,32 @@ $config =
 		"providers" => array (
 		/* ------------------------------------------------------------------------------------------ */
 	        "Facebook" => array (
-	          	"enabled" => true,
+	          	"enabled" => false,
 	          	"keys"    => array ( "id" => "1897143067202176", "secret" => "9443f71220c1b604797319298a4df0a9" ),
 	          	"scope"   => ['email','public_profile','user_friends']
 	    	),
-	    	
+
 			"Google" => array (
 				"enabled" => true,
-				"keys"    => array ( "id" => "62812281069-79euita9n874jplgjrvo168tpj9jm8of.apps.googleusercontent.com","secret" => "Z1KNlpxWnmRddaYfsYBllXMC"),
-				"redirect_uri"=>"http://localhost/cisociall/index.php/social/endpoint?hauth.done=Google"
+				"keys"    => array ( "id" => "242525638807-h37618dg0h9i12lob3ad1rsrpdtjtj7b.apps.googleusercontent.com","secret" => "fKAnq4rCw95Yka87-jqH-D25"),
+				"redirect_uri"=>"http://ridersandpoolers.com/demo/login/endpoint?hauth.done=Google"
 			),
 
 			"Twitter" => array (
-				"enabled" => true,
+				"enabled" => false,
 				"keys"    => array ( "key" => "2EfdXXpi79nbfo0VFQViK8G7g", "secret" => "x4ToPn7ZJ2uM42t4MhJn47wNxFG5lnaJCCJxMLedwnHcnPeXtq")
 			),
 
 			"Instagram" => array (
-				"enabled" => true,
+				"enabled" => false,
 				"keys"    => array ( "id" => "1a8e02ed3bd34ade8e0c49db98ae6a3d", "secret" => "aca2ee9345fe4911ae541f5541feaf56")
 			),
 
 			"LinkedIn" => array (
-				"enabled" => true,
+				"enabled" => false,
 				"keys"    => array ( "id" => "86b9jmf9dunrqw", "secret" => "8Xo264B6d8YrGEZJ")
 			),
-
+/*
 			"Vimeo" => array (
 				"enabled" => true,
 				"keys"    => array ( "id" => "cb396dc1310cbfc6d8d2a3410960f030e2ea6bf7", "secret" => "IqHUk1cIzOF0NF+IVpc5vOELNVsYVZyN4kmc4ApNAzDVXB9prb2u/5MJebsKx098gE6SgpSuzvgc7uxGGQdHARXYZM9ODqlBM0Le0+suzZ7BAU0lf913U4+Y7on/tF6i")
